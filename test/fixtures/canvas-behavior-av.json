@@ -1,0 +1,24 @@
+{
+  "@context": "http://iiif.io/api/presentation/3/context.json",
+  "id": "http://localhost:3001/canvas-behavior-av.json",
+  "type": "Manifest",
+  "label": { "en": ["Canvas Behavior: A/V Test"] },
+  "items": [
+    {
+      "id": "http://localhost:3001/canvas/av/1",
+      "type": "Canvas",
+      "label": { "en": ["Auto-advance canvas"] },
+      "duration": 30,
+      "behavior": ["auto-advance"],
+      "items": []
+    },
+    {
+      "id": "http://localhost:3001/canvas/av/2",
+      "type": "Canvas",
+      "label": { "en": ["No-auto-advance canvas"] },
+      "duration": 30,
+      "behavior": ["no-auto-advance"],
+      "items": []
+    }
+  ]
+}

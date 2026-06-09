@@ -1,4 +1,5 @@
 import {
+  Behavior,
   ExternalResourceType,
   ViewingHint,
 } from "@iiif/vocabulary/dist-commonjs";
@@ -350,6 +351,28 @@ export class Canvas extends Resource {
     }
 
     return null;
+  }
+
+  getBehavior(): Behavior | null {
+    let behavior: any = this.getProperty("behavior");
+
+    if (Array.isArray(behavior)) {
+      behavior = behavior[0];
+    }
+
+    if (behavior) {
+      return behavior;
+    }
+
+    return null;
+  }
+
+  getBehaviors(): Behavior[] {
+    const behavior: any = this.getProperty("behavior");
+
+    if (!behavior) return [];
+    if (Array.isArray(behavior)) return behavior as Behavior[];
+    return [behavior as Behavior];
   }
 
   get imageResources() {

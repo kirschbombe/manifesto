@@ -1,0 +1,59 @@
+{
+  "@context": "http://iiif.io/api/presentation/3/context.json",
+  "id": "http://localhost:3001/canvas-behavior-facing-pages.json",
+  "type": "Manifest",
+  "label": { "en": ["Canvas Behavior: facing-pages Test"] },
+  "items": [
+    {
+      "id": "http://localhost:3001/canvas/fp/1",
+      "type": "Canvas",
+      "label": { "en": ["Front cover"] },
+      "width": 1000, "height": 1500,
+      "items": []
+    },
+    {
+      "id": "http://localhost:3001/canvas/fp/2",
+      "type": "Canvas",
+      "label": { "en": ["Page spread 1"] },
+      "width": 1000, "height": 1500,
+      "items": []
+    },
+    {
+      "id": "http://localhost:3001/canvas/fp/3",
+      "type": "Canvas",
+      "label": { "en": ["Page spread 2"] },
+      "width": 1000, "height": 1500,
+      "items": []
+    },
+    {
+      "id": "http://localhost:3001/canvas/fp/4",
+      "type": "Canvas",
+      "label": { "en": ["Page spread 3 (left)"] },
+      "width": 2000, "height": 1500,
+      "behavior": ["facing-pages"],
+      "items": []
+    },
+    {
+      "id": "http://localhost:3001/canvas/fp/5",
+      "type": "Canvas",
+      "label": { "en": ["Page spread 3 (right)"] },
+      "width": 2000, "height": 1500,
+      "behavior": ["facing-pages"],
+      "items": []
+    },
+    {
+      "id": "http://localhost:3001/canvas/fp/6",
+      "type": "Canvas",
+      "label": { "en": ["Page spread 4"] },
+      "width": 1000, "height": 1500,
+      "items": []
+    },
+    {
+      "id": "http://localhost:3001/canvas/fp/7",
+      "type": "Canvas",
+      "label": { "en": ["Page spread 5"] },
+      "width": 1000, "height": 1500,
+      "items": []
+    }
+  ]
+}
