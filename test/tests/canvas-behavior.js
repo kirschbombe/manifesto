@@ -44,7 +44,7 @@ describe('#canvasBehavior', function() {
         });
     });
 
-    describe('facing-pages canvases in an individuals manifest', function() {
+    describe('facing-pages canvas in a paged manifest', function() {
 
         it('loads successfully', function(done) {
             manifesto.loadManifest(manifests.canvasBehaviorFacingPages).then(function(data) {
@@ -53,8 +53,8 @@ describe('#canvasBehavior', function() {
             });
         });
 
-        it('manifest has no behavior', function() {
-            expect(facingPagesManifest.getBehavior()).to.be.null;
+        it('manifest has paged behavior', function() {
+            facingPagesManifest.getBehavior().should.equal(Behavior.PAGED);
         });
 
         it('front cover has no canvas behavior', function() {
@@ -62,18 +62,13 @@ describe('#canvasBehavior', function() {
             expect(canvas.getBehavior()).to.be.null;
         });
 
-        it('first facing-pages canvas has facing-pages behavior', function() {
+        it('spread canvas has facing-pages behavior', function() {
             var canvas = facingPagesManifest.getSequenceByIndex(0).getCanvasByIndex(3);
             canvas.getBehavior().should.equal(Behavior.FACING_PAGES);
         });
 
-        it('second facing-pages canvas has facing-pages behavior', function() {
+        it('canvas after spread has no behavior', function() {
             var canvas = facingPagesManifest.getSequenceByIndex(0).getCanvasByIndex(4);
-            canvas.getBehavior().should.equal(Behavior.FACING_PAGES);
-        });
-
-        it('canvas after facing-pages pair has no behavior', function() {
-            var canvas = facingPagesManifest.getSequenceByIndex(0).getCanvasByIndex(5);
             expect(canvas.getBehavior()).to.be.null;
         });
     });
